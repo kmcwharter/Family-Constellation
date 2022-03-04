@@ -20,7 +20,7 @@ function init() {
   const container = document.getElementById( 'container' );
   container.addEventListener( 'click', function () {
 
-    // video.play();
+    video.play();
     
 
   } );
@@ -30,12 +30,10 @@ function init() {
 
   // video
 
-  // const video = document.getElementById( 'background-video' );
-  // video.play();
+  const video = document.getElementById( 'background-video' );
+  video.play();
 
-  const texture = new THREE.Color (0x101010);
-
-  //const texture = new THREE.VideoTexture( video );
+  const texture = new THREE.VideoTexture( video );
 
   scene = new THREE.Scene();
   scene.background = new THREE.Color( 0x101010 );
@@ -121,6 +119,7 @@ function render() {
 }
 
 //end
+
 const Graph = ({ d3Data, highlightedFamily, setHighlightedFamily }) => {
 
   const [highlights, setHighlights] = useState({
